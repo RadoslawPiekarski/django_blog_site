@@ -6,7 +6,11 @@ from django.http import Http404
 def index(request):
     pass
 
+
 def posts(request):
     pass
 
+
+def single_post(request):
+    pass
 
