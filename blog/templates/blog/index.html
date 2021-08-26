@@ -22,19 +22,7 @@
     <section id="latest-posts">
         <h2>Latest Posts:</h2>
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="{% static "blog/images/mountains.jpg" %}" alt="Some image">
-                        <div class="post__content">
-                            <h3>Post Title</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ligula magna. Praesent aliquet rhoncus massa, blandit rhoncus mauris malesuada in. Sed vulputate, orci id varius rutrum, eros nunc mollis nunc, vitae ornare sem orci sed nisi. Sed venenatis leo augue. Phasellus ullamcorper quam nec magna varius, eget porta magna pretium. Cras mollis odio non ligula condimentum malesuada. Sed volutpat non mi sed convallis. Donec ex nisi, condimentum vitae pharetra a, tempus ut risus. Praesent convallis tempor mauris ac eleifend. Donec porta eros lacus, at laoreet mauris rutrum eu. Mauris ac nulla quis augue dapibus varius. </p>
-
-                        </div>
-                    </a>
-
-                </article>
-            </li>
+            {%  include "blog/includes/post.html" %}
         </ul>
     </section>
 
