@@ -6,5 +6,42 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Welcome to my blog</h1>
+    <header id="main-navigation">
+        <h1><a href="">Blog name</a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="The author of the blog">
+            <h2>AUTHOR NAME'S</h2>
+        </header>
+    <p> Some lorem ipsum. Some lorem ipsum. Some lorem ipsum.</p>
+    </section>
+    <section id="latest-posts">
+        <h2>Latest Posts:</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Some image">
+                        <div class="post__conten">
+                            <h3>Post Title</h3>
+                            <p>Some lorem ipsum. Some lorem ipsum. Some lorem ipsum.Some lorem ipsum. Some lorem ipsum. Some lorem ipsum.</p>
+
+                        </div>
+                    </a>
+
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>Some lorem ipsum. Some lorem ipsum. Some lorem ipsum.Some lorem ipsum. Some lorem ipsum. Some lorem ipsum.</p>
+        <p>Some lorem ipsum. Some lorem ipsum. Some lorem ipsum.Some lorem ipsum. Some lorem ipsum. Some lorem ipsum.</p>
+    </section>
 {% endblock %}
