@@ -1,15 +1,13 @@
 {% load static %}
 
 <li>
-                <article class="post">
-                    <a href="">
-                        <img src="{% static "blog/images/mountains.jpg" %}" alt="Some image">
-                        <div class="post__content">
-                            <h3>Post Title</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ligula magna. Praesent aliquet rhoncus massa, blandit rhoncus mauris malesuada in. Sed vulputate, orci id varius rutrum, eros nunc mollis nunc, vitae ornare sem orci sed nisi. </p>
-
-                        </div>
-                    </a>
-
-                </article>
-            </li>
+    <article class="post">
+        <a href="{% url "single-post-page" "the-mountains" %}">
+            <img src="{% static "blog/images/mountains.jpg" %}" alt="Some image">
+            <div class="post__content">
+                <h3>Post Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ligula magna. Praesent aliquet rhoncus massa, blandit rhoncus mauris malesuada in. Sed vulputate, orci id varius rutrum, eros nunc mollis nunc, vitae ornare sem orci sed nisi. </p>
+            </div>
+        </a>
+    </article>
+</li>
