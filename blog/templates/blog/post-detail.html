@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
 
-</body>
-</html>
+{% block title %}
+    This post Title
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}">
+    <link rel="stylesheet" href="{% static "blog/all_posts.css" %}">
+{% endblock %}
+
+{% block content %}
+    <section id="summary">
+        <h2>Post Title</h2>
+        <article>
+            <img src="{% static "blog/images/mountains.jpg" %}" alt="Post title">
+            <address>Created by Radoslaw Piekarski</address>
+            <div>
+                Last updated on <time>09.2021</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem dignissimos enim iste itaque libero porro vitae. Animi earum eligendi ipsum laboriosam nesciunt officia praesentium reprehenderit temporibus voluptatem. Nisi, quis?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem dignissimos enim iste itaque libero porro vitae. Animi earum eligendi ipsum laboriosam nesciunt officia praesentium reprehenderit temporibus voluptatem. Nisi, quis?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem dignissimos enim iste itaque libero porro vitae. Animi earum eligendi ipsum laboriosam nesciunt officia praesentium reprehenderit temporibus voluptatem. Nisi, quis?
+        </p>
+    </main>
+{% endblock %}
