@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import Http404
 from datetime import date
+
 # Create your views here.
-posts = [
+
+all_posts = [
     {
         "slug": "hike-in-the-mountains",
         "image": "mountains.jpg",
@@ -28,7 +30,7 @@ def get_date(post):
 
 
 def index(request):
-    sorted_posts = posts.sort(key=get_date)
+    sorted_posts = sorted(all_posts, key=get_date)
     latest_posts = sorted_posts[-3:]
     return render(request, "blog/index.html", {
         "posts": latest_posts
