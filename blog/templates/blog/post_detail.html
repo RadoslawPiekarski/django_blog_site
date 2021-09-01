@@ -16,7 +16,7 @@
             <img src="{% static "blog/images/mountains.jpg" %}" alt="Post title">
             <address>Created by {{ post.author }}</address>
             <div>
-                Last updated on <time>09.2021</time>
+                Last updated on <time>{{ post.date }}</time>
             </div>
         </article>
     </section>
