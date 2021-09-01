@@ -11,10 +11,10 @@
 
 {% block content %}
     <section id="summary">
-        <h2>Post Title</h2>
+        <h2>{{ post.title }}</h2>
         <article>
             <img src="{% static "blog/images/mountains.jpg" %}" alt="Post title">
-            <address>Created by Radoslaw Piekarski</address>
+            <address>Created by {{ post.author }}</address>
             <div>
                 Last updated on <time>09.2021</time>
             </div>
