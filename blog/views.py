@@ -16,7 +16,7 @@ all_posts = [
     },
     {
         "slug": "second-post",
-        "image": "mountains.jpg",
+        "image": "woods.jpg",
         "author": "Radek",
         "date": date(2021, 8, 23),
         "title": "Second post",
@@ -24,6 +24,7 @@ all_posts = [
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ligula magna. Praesent aliquet rhoncus massa, blandit rhoncus mauris malesuada in. Sed vulputate, orci id varius rutrum, eros nunc mollis nunc, vitae ornare sem orci sed nisi."
     },
 ]
+
 
 def get_date(post):
     return post['date']
@@ -45,4 +46,3 @@ def posts(request):
 
 def post_detail(request, slug):
     return render(request, "blog/post_detail.html")
-
