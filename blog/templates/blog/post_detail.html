@@ -16,20 +16,12 @@
             <img src="{% static "blog/images/mountains.jpg" %}" alt="Post title">
             <address>Created by {{ post.author }}</address>
             <div>
-                Last updated on <time>{{ post.date }}</time>
+                Last updated on <time>{{ post.date|date:"d M Y" }}</time>
             </div>
         </article>
     </section>
 
     <main>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem dignissimos enim iste itaque libero porro vitae. Animi earum eligendi ipsum laboriosam nesciunt officia praesentium reprehenderit temporibus voluptatem. Nisi, quis?
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem dignissimos enim iste itaque libero porro vitae. Animi earum eligendi ipsum laboriosam nesciunt officia praesentium reprehenderit temporibus voluptatem. Nisi, quis?
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem dignissimos enim iste itaque libero porro vitae. Animi earum eligendi ipsum laboriosam nesciunt officia praesentium reprehenderit temporibus voluptatem. Nisi, quis?
-        </p>
+        {{ post.content }}
     </main>
 {% endblock %}
