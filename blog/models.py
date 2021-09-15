@@ -7,7 +7,7 @@ from django.core.validators import MinLengthValidator
 class Author(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
-    email_address = models.EmailField(max_length=20)
+    email_address = models.EmailField(max_length=50)
 
 
 class Tag(models.Model):
