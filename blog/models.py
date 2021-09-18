@@ -31,3 +31,4 @@ class Post(models.Model):
     slug = models.SlugField(unique=True)
     content = models.TextField(validators=[MinLengthValidator(10)])
     tags = models.ManyToManyField(Tag)
+
