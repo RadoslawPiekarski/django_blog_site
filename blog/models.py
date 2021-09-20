@@ -32,3 +32,4 @@ class Post(models.Model):
     content = models.TextField(validators=[MinLengthValidator(10)])
     tags = models.ManyToManyField(Tag)
 
+
