@@ -22,7 +22,7 @@ def index(request):
 
 def posts(request):
     return render(request, "blog/all_posts.html", {
-        "all_posts": all_posts
+        "all_posts": Post.objects.all().order_by("-date")
     })
 
 
