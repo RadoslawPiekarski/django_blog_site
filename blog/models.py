@@ -22,6 +22,7 @@ class Tag(models.Model):
     def __str__(self):
         return f"{self.caption}"
 
+
 class Post(models.Model):
     title = models.CharField(max_length=50)
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, related_name="posts")
@@ -31,5 +32,3 @@ class Post(models.Model):
     slug = models.SlugField(unique=True)
     content = models.TextField(validators=[MinLengthValidator(10)])
     tags = models.ManyToManyField(Tag)
-
-
