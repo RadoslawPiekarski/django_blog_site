@@ -24,7 +24,7 @@ def posts(request):
 # single post
 
 def post_detail(request, slug):
-    identified_post = Post.objects.get(slug=slug)
+    identified_post = get_object_or_404(Post, slug=slug)
     return render(request, "blog/post_detail.html", {
         "post": identified_post
     })
