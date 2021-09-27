@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import Http404
 from .models import Post
 
@@ -24,8 +24,7 @@ def posts(request):
 # single post
 
 def post_detail(request, slug):
-
-    # identified_post = next(post for post in all_posts if post['slug'] == slug)
+    identified_post = Post.objects.get(slug=slug)
     return render(request, "blog/post_detail.html", {
         "post": identified_post
     })
