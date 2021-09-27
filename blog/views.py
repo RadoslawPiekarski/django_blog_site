@@ -6,8 +6,6 @@ from .models import Post
 
 # Create your views here.
 
-all_posts = []
-
 
 def get_date(post):
     return post['date']
@@ -21,8 +19,9 @@ def index(request):
 
 
 def posts(request):
+    all_posts = Post.objects.all().order_by("-date")
     return render(request, "blog/all_posts.html", {
-        "all_posts": Post.objects.all().order_by("-date")
+        "all_posts": all_posts
     })
 
 
