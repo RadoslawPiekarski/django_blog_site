@@ -1,14 +1,10 @@
 from django.shortcuts import render
 from django.http import Http404
-from datetime import date
 from .models import Post
 
 
 # Create your views here.
 
-
-def get_date(post):
-    return post['date']
 
 
 def index(request):
@@ -28,7 +24,8 @@ def posts(request):
 # single post
 
 def post_detail(request, slug):
-    identified_post = next(post for post in all_posts if post['slug'] == slug)
+
+    # identified_post = next(post for post in all_posts if post['slug'] == slug)
     return render(request, "blog/post_detail.html", {
         "post": identified_post
     })
